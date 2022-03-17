@@ -1,0 +1,18 @@
+{
+  "name": "urlshortner",
+  "version": "1.0.0",
+  "description": "a url shortner app made by aryash jain with Node express and mongoDb on 17 march that is pre holi night and a week before exams",
+  "main": "index.js",
+  "scripts": {
+    "chalo": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7",
+    "nodemon": "^2.0.15",
+    "shortid": "^2.2.16"
+  }
+}

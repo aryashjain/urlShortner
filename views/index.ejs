@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>URL SHRINKER</h1>
+  <form action="/shortUrls" method="POST">
+      <label for="fullUrL" class="sr-only">URL</label>
+      <input required placeholder="Url" type="url"
+       name="fullUrl" id="fullUrl" class="form-control mr-2" >
+      <button class="btn btn-success"type="submit">Shrink</button>
+  </form>  
+  <table class="table table-striped table-responsive">
+      <thead>
+          <tr>
+              <th>-           full url   - </th>
+              <th>||-           --shortened url---                 -</th>
+              <th>|- Clicks    - |</th>
+             </tr>
+      </thead>
+      <tbody>
+          <% shortUrls.forEach(shortUrl => { %>
+            <tr>
+                <td>
+                    <a href="<%= shortUrl.full%>"><%=shortUrl.full %></a>
+                </a> </td>
+             <td> 
+            <a href="<%= shortUrl.short%>"><%=shortUrl.short %></a>
+                </a> </td> 
+                     <td> <%= shortUrl.clicks%>                </td>
+            </tr> <%})%>
+      </tbody>
+  </table>
+</body>
+</html>
